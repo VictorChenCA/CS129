@@ -1,0 +1,45 @@
+{
+  "model": "gs://checkpoints-cs224n/final_best/distilled_models/multi_task_algebra_distilled/",
+  "num_examples": 1187,
+  "accuracy": 0.33866891322662174,
+  "boxed_rate": 0.7085088458298231,
+  "correct": 402,
+  "used_boxed": 841,
+  "per_level": {
+    "Level 3": {
+      "total": 261,
+      "correct": 100,
+      "used_boxed": 200,
+      "accuracy": 0.3831417624521073,
+      "boxed_rate": 0.7662835249042146
+    },
+    "Level 1": {
+      "total": 135,
+      "correct": 99,
+      "used_boxed": 128,
+      "accuracy": 0.7333333333333333,
+      "boxed_rate": 0.9481481481481482
+    },
+    "Level 4": {
+      "total": 283,
+      "correct": 64,
+      "used_boxed": 181,
+      "accuracy": 0.22614840989399293,
+      "boxed_rate": 0.6395759717314488
+    },
+    "Level 5": {
+      "total": 307,
+      "correct": 29,
+      "used_boxed": 150,
+      "accuracy": 0.09446254071661238,
+      "boxed_rate": 0.48859934853420195
+    },
+    "Level 2": {
+      "total": 201,
+      "correct": 110,
+      "used_boxed": 182,
+      "accuracy": 0.5472636815920398,
+      "boxed_rate": 0.9054726368159204
+    }
+  }
+}
