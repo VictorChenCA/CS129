@@ -1,0 +1,6 @@
+{
+  "run_name": "case_v3opt_250_20260311_000000",
+  "jsonl_dir": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\jsonl_model_output_for_CaSE\\case_v3opt_250_20260311_000000",
+  "results_dir": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_v3opt_250_20260311_000000",
+  "notes": "250-example CaSE rerun with v3 optimized RL checkpoints and regenerated distilled JSONL."
+}

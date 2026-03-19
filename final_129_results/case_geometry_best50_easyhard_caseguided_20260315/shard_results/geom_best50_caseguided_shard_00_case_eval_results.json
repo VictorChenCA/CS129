@@ -1,0 +1,905 @@
+{
+  "config": {
+    "input_jsonl": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_best50_easyhard_caseguided_20260315\\shards\\geom_best50_caseguided_shard_00.jsonl",
+    "use_default_example": false,
+    "output_json": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_best50_easyhard_caseguided_20260315\\shard_results\\geom_best50_caseguided_shard_00_case_eval_results.json",
+    "verbose": false,
+    "max_examples": 10,
+    "step_split_mode": "auto",
+    "project": "cs224n-dapo-distill",
+    "location": "us-central1",
+    "model_name": "gemini-2.5-flash",
+    "requests_per_minute": 12,
+    "max_retries": 5,
+    "initial_retry_delay": 1.0,
+    "max_retry_delay": 30.0,
+    "timeout_seconds": 60.0,
+    "example_timeout_seconds": 180.0,
+    "id_field": "id",
+    "question_field": "question",
+    "rationale_field": "rationale",
+    "answer_field": "answer",
+    "fail_on_judge_error": false,
+    "default_user_email": "maxlrodwork@gmail.com"
+  },
+  "dataset_summary": {
+    "total_examples_loaded": 10,
+    "total_examples_evaluated": 10,
+    "total_examples_skipped": 0,
+    "total_steps_evaluated": 45,
+    "mean_step_relevance": 0.7777777777777778,
+    "mean_step_coherence": 0.8,
+    "mean_example_relevance": 0.7494444444444445,
+    "mean_example_coherence": 0.7994444444444444,
+    "fraction_examples_all_steps_relevant": 0.2,
+    "fraction_examples_all_steps_coherent": 0.3,
+    "fraction_examples_with_any_irrelevant_step": 0.8,
+    "fraction_examples_with_any_incoherent_step": 0.7
+  },
+  "examples": [
+    {
+      "id": "geom_eh100_014",
+      "question": "Compute $\\cos 45^\\circ$.",
+      "answer": "\\frac{\\sqrt{2}}{2}",
+      "rationale": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.\n\nProblem:\nCompute $\\cos 45^\\circ$.\n\nassistant\n<rationale>1. **Understanding the Problem**: The goal is to compute the cosine of $45^\\circ$. \n\n2. **Using Trigonometric Values**:\n   - We know that $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$ and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. \n   - These values can be derived from the unit circle or trigonometric identities.\n\n3. **Conclusion**:\n   - Therefore, $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.\n\nThe final answer is: $\\boxed{\\frac{\\sqrt{2}}{2}}$.",
+      "steps": [
+        "2. **Using Trigonometric Values**: - We know that $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$ and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. - These values can be derived from the unit circle or trigonometric identities.",
+        "3. **Conclusion**: - Therefore, $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. The final answer is: $\\boxed{\\frac{\\sqrt{2}}{2}}$."
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "2. **Using Trigonometric Values**: - We know that $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$ and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. - These values can be derived from the unit circle or trigonometric identities.",
+          "prior_context": [],
+          "relevance_score": 1,
+          "relevance_reason": "The step directly states the value of cos 45 degrees, which is the exact computation requested by the question.",
+          "coherence_score": 1,
+          "coherence_reason": "As there are no previous steps, this step serves as a direct and coherent starting point to answer the question.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "3. **Conclusion**: - Therefore, $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. The final answer is: $\\boxed{\\frac{\\sqrt{2}}{2}}$.",
+          "prior_context": [
+            "2. **Using Trigonometric Values**: - We know that $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$ and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. - These values can be derived from the unit circle or trigonometric identities."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step directly provides the answer to the question, which is to compute cos 45 degrees.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically concludes the value of cos 45 degrees based on the trigonometric knowledge stated in the previous step.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 2,
+        "step_relevance_mean": 1.0,
+        "step_coherence_mean": 1.0,
+        "all_steps_relevant": true,
+        "all_steps_coherent": true
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_049",
+      "question": "What is the length, in units, of the radius of a sphere whose volume and surface area, in cubic units and square units, respectively, are numerically equal?",
+      "answer": "3",
+      "rationale": "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:\n\n\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]\n\nWe can simplify this equation by dividing both sides by \\(4\\pi r^2\\):\n\n\\[\n\\frac{1}{3}r = 1\n\\]\n\nMultiplying both sides by 3 gives us:\n\n\\[\nr = 3\n\\]\n\nThus, the length of the radius of the sphere is \\(\\boxed{3}\\) units.",
+      "steps": [
+        "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+        "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]",
+        "We can simplify this equation by dividing both sides by \\(4\\pi r^2\\):",
+        "\\[\n\\frac{1}{3}r = 1\n\\]",
+        "Multiplying both sides by 3 gives us:",
+        "\\[\nr = 3\n\\]",
+        "Thus, the length of the radius of the sphere is \\(\\boxed{3}\\) units."
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+          "prior_context": [],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies the formulas for the volume and surface area of a sphere and states the condition that they are numerically equal, which is central to the question.",
+          "coherence_score": 1,
+          "coherence_reason": "As the first step, it logically introduces the necessary formulas and the problem's core condition, setting up the problem for solution.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]",
+          "prior_context": [
+            "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step correctly translates the problem's condition (volume and surface area are numerically equal) into a mathematical equation, which is central to solving the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step directly follows the previous step, which stated the formulas for volume and surface area and indicated that an equation would be set up equating them.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "We can simplify this equation by dividing both sides by \\(4\\pi r^2\\):",
+          "prior_context": [
+            "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+            "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step proposes simplifying the equation derived from the problem statement, which is essential for solving for the radius.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows the previous step, which established the equation that now needs to be solved.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 3,
+          "step_text": "\\[\n\\frac{1}{3}r = 1\n\\]",
+          "prior_context": [
+            "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+            "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]",
+            "We can simplify this equation by dividing both sides by \\(4\\pi r^2\\):"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step correctly simplifies the equation derived from the problem statement, moving closer to finding the radius.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows from the previous step, which stated the intention to divide both sides of the equation by 4πr².",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 4,
+          "step_text": "Multiplying both sides by 3 gives us:",
+          "prior_context": [
+            "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+            "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]",
+            "We can simplify this equation by dividing both sides by \\(4\\pi r^2\\):",
+            "\\[\n\\frac{1}{3}r = 1\n\\]"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step performs an algebraic operation to solve for 'r', which is the objective of the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step, which simplified the equation to (1/3)r = 1, and multiplying by 3 is the next natural step to isolate 'r'.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 5,
+          "step_text": "\\[\nr = 3\n\\]",
+          "prior_context": [
+            "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+            "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]",
+            "We can simplify this equation by dividing both sides by \\(4\\pi r^2\\):",
+            "\\[\n\\frac{1}{3}r = 1\n\\]",
+            "Multiplying both sides by 3 gives us:"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step directly calculates the radius, which is the quantity the question asks for, making it highly relevant.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows from the previous step, which stated 'Multiplying both sides by 3 gives us:' and the equation (1/3)r = 1.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 6,
+          "step_text": "Thus, the length of the radius of the sphere is \\(\\boxed{3}\\) units.",
+          "prior_context": [
+            "<rationale>The volume \\(V\\) of a sphere with radius \\(r\\) is given by \\(\\frac{4}{3}\\pi r^3\\), and its surface area \\(A\\) is given by \\(4\\pi r^2\\). According to the problem, these two quantities are numerically equal, so we set up the equation:",
+            "\\[\n\\frac{4}{3}\\pi r^3 = 4\\pi r^2\n\\]",
+            "We can simplify this equation by dividing both sides by \\(4\\pi r^2\\):",
+            "\\[\n\\frac{1}{3}r = 1\n\\]",
+            "Multiplying both sides by 3 gives us:",
+            "\\[\nr = 3\n\\]"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step provides the final answer to the question, which is the length of the radius.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step directly states the value of 'r' derived in the previous step, concluding the calculation logically.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 7,
+        "step_relevance_mean": 1.0,
+        "step_coherence_mean": 1.0,
+        "all_steps_relevant": true,
+        "all_steps_coherent": true
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_091",
+      "question": "In the diagram, points $U$, $V$, $W$, $X$, $Y$, and $Z$ lie on a straight line with $UV=VW=WX=XY=YZ=5$.  Semicircles with diameters $UZ$, $UV$, $VW$, $WX$, $XY$, and $YZ$ create the shape shown.  What is the area of the shaded region?\n[asy]\nsize(5cm); defaultpen(fontsize(9));\npair one = (1, 0);\npair u = (0, 0); pair v = u + one; pair w = v + one; pair x = w + one; pair y = x + one; pair z = y + one;\npath region = u{up}..{down}z..{up}y..{down}x..{up}w..{down}v..{up}u--cycle;\nfilldraw(region, gray(0.75), linewidth(0.75));\ndraw(u--z, dashed + linewidth(0.75));\n\n// labels\nlabel(\"$U$\", u, W); label(\"$Z$\", z, E);\nlabel(\"$V$\", v, 0.8 * SE); label(\"$X$\", x, 0.8 * SE);\nlabel(\"$W$\", w, 0.8 * SW); label(\"$Y$\", y, 0.8 * SW);\n[/asy]",
+      "answer": "\\frac{75\\pi}{4}",
+      "rationale": "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$. Similarly, the semicircles with diameters $UV$, $VW$, and $WX$ have radii $\\frac{UV}{2}$, $\\frac{VW}{2}$, and $\\frac{WX}{2}$ respectively, so their areas are $\\frac{\\pi UV^2}{4}$, $\\frac{\\pi VW^2}{4}$, and $\\frac{\\pi WX^2}{4}$. The semicircle with diameter $XY$ has radius $\\frac{XY}{2}$, so its area is $\\frac{\\pi XY^2}{4}$. Finally, the semicircle with diameter $YZ$ has radius $\\frac{YZ}{2}$, so its area is $\\frac{\\pi YZ^2}{4}$. Adding these areas together gives us the total area of the shaded region: \\[\\frac{\\pi UZ^2}{4} + \\frac{\\pi UV^2}{4} + \\frac{\\pi VW^2}{4} + \\frac{\\pi WX^2}{4} + \\frac{\\pi XY^2}{4} + \\frac{\\pi YZ^2}{4}.\\] Since $UV=VW=WX=XY=YZ=5$, we can substitute these values into the equation to get \\[\\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} = \\frac{3\\pi (5^2)}{4}.\\] Simplifying this expression gives us \\[\\frac{3\\pi (25)}{4} = \\boxed{\\frac{75\\pi}{4}}.\\] The answer is \\(\\frac{75\\pi}{4}\\).",
+      "steps": [
+        "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$.",
+        "Similarly, the semicircles with diameters $UV$, $VW$, and $WX$ have radii $\\frac{UV}{2}$, $\\frac{VW}{2}$, and $\\frac{WX}{2}$ respectively, so their areas are $\\frac{\\pi UV^2}{4}$, $\\frac{\\pi VW^2}{4}$, and $\\frac{\\pi WX^2}{4}$.",
+        "The semicircle with diameter $XY$ has radius $\\frac{XY}{2}$, so its area is $\\frac{\\pi XY^2}{4}$.",
+        "Finally, the semicircle with diameter $YZ$ has radius $\\frac{YZ}{2}$, so its area is $\\frac{\\pi YZ^2}{4}$.",
+        "Adding these areas together gives us the total area of the shaded region: \\[\\frac{\\pi UZ^2}{4} + \\frac{\\pi UV^2}{4} + \\frac{\\pi VW^2}{4} + \\frac{\\pi WX^2}{4} + \\frac{\\pi XY^2}{4} + \\frac{\\pi YZ^2}{4}.\\] Since $UV=VW=WX=XY=YZ=5$, we can substitute these values into the equation to get \\[\\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} = \\frac{3\\pi (5^2)}{4}.\\] Simplifying this expression gives us \\[\\frac{3\\pi (25)}{4} = \\boxed{\\frac{75\\pi}{4}}.\\] The answer is \\(\\frac{75\\pi}{4}\\)."
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$.",
+          "prior_context": [],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies the largest semicircle and begins to calculate its area, which is a fundamental component of the shaded region.",
+          "coherence_score": 1,
+          "coherence_reason": "As the first step, it logically begins by addressing one of the primary geometric shapes involved in the problem, setting up for further calculations.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "Similarly, the semicircles with diameters $UV$, $VW$, and $WX$ have radii $\\frac{UV}{2}$, $\\frac{VW}{2}$, and $\\frac{WX}{2}$ respectively, so their areas are $\\frac{\\pi UV^2}{4}$, $\\frac{\\pi VW^2}{4}$, and $\\frac{\\pi WX^2}{4}$.",
+          "prior_context": [
+            "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies and calculates the areas of other relevant semicircles, which are components needed to determine the total shaded area.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step, which established the method for calculating the area of a semicircle and applied it to the largest one. The current step applies the same method to other semicircles using the phrase 'Similarly'.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "The semicircle with diameter $XY$ has radius $\\frac{XY}{2}$, so its area is $\\frac{\\pi XY^2}{4}$.",
+          "prior_context": [
+            "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$.",
+            "Similarly, the semicircles with diameters $UV$, $VW$, and $WX$ have radii $\\frac{UV}{2}$, $\\frac{VW}{2}$, and $\\frac{WX}{2}$ respectively, so their areas are $\\frac{\\pi UV^2}{4}$, $\\frac{\\pi VW^2}{4}$, and $\\frac{\\pi WX^2}{4}$."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step calculates the area of one of the semicircles that form part of the shaded region, which is necessary for solving the problem.",
+          "coherence_score": 1,
+          "coherence_reason": "The step continues the pattern established in the previous steps of calculating the areas of individual semicircles based on their diameters.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 3,
+          "step_text": "Finally, the semicircle with diameter $YZ$ has radius $\\frac{YZ}{2}$, so its area is $\\frac{\\pi YZ^2}{4}$.",
+          "prior_context": [
+            "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$.",
+            "Similarly, the semicircles with diameters $UV$, $VW$, and $WX$ have radii $\\frac{UV}{2}$, $\\frac{VW}{2}$, and $\\frac{WX}{2}$ respectively, so their areas are $\\frac{\\pi UV^2}{4}$, $\\frac{\\pi VW^2}{4}$, and $\\frac{\\pi WX^2}{4}$.",
+            "The semicircle with diameter $XY$ has radius $\\frac{XY}{2}$, so its area is $\\frac{\\pi XY^2}{4}$."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step calculates the area of one of the semicircles mentioned in the problem description, which is necessary for determining the total shaded area.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically continues the pattern established in previous steps of calculating the areas of individual semicircles based on their diameters.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 4,
+          "step_text": "Adding these areas together gives us the total area of the shaded region: \\[\\frac{\\pi UZ^2}{4} + \\frac{\\pi UV^2}{4} + \\frac{\\pi VW^2}{4} + \\frac{\\pi WX^2}{4} + \\frac{\\pi XY^2}{4} + \\frac{\\pi YZ^2}{4}.\\] Since $UV=VW=WX=XY=YZ=5$, we can substitute these values into the equation to get \\[\\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} + \\frac{\\pi (5^2)}{4} = \\frac{3\\pi (5^2)}{4}.\\] Simplifying this expression gives us \\[\\frac{3\\pi (25)}{4} = \\boxed{\\frac{75\\pi}{4}}.\\] The answer is \\(\\frac{75\\pi}{4}\\).",
+          "prior_context": [
+            "<rationale>First, we note that the semicircle with diameter $UZ$ has radius $\\frac{UZ}{2}$, so its area is $\\pi \\left(\\frac{UZ}{2}\\right)^2 = \\frac{\\pi UZ^2}{4}$.",
+            "Similarly, the semicircles with diameters $UV$, $VW$, and $WX$ have radii $\\frac{UV}{2}$, $\\frac{VW}{2}$, and $\\frac{WX}{2}$ respectively, so their areas are $\\frac{\\pi UV^2}{4}$, $\\frac{\\pi VW^2}{4}$, and $\\frac{\\pi WX^2}{4}$.",
+            "The semicircle with diameter $XY$ has radius $\\frac{XY}{2}$, so its area is $\\frac{\\pi XY^2}{4}$.",
+            "Finally, the semicircle with diameter $YZ$ has radius $\\frac{YZ}{2}$, so its area is $\\frac{\\pi YZ^2}{4}$."
+          ],
+          "relevance_score": 0,
+          "relevance_reason": "The step incorrectly assumes the shaded area is the sum of all listed semicircles, which contradicts the visual representation of the shaded region in the diagram. It also incorrectly substitutes 5 for UZ.",
+          "coherence_score": 0,
+          "coherence_reason": "The claim that summing all listed semicircle areas yields the shaded region's area is a logical disconnect from the problem's definition. Additionally, the substitution of UZ=5 is incorrect, as UZ is the sum of five segments of length 5.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 5,
+        "step_relevance_mean": 0.8,
+        "step_coherence_mean": 0.8,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_029",
+      "question": "In right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+      "answer": "15",
+      "rationale": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.\n\nProblem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.\n\nassistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:\n\n\\[\n\\tan K = \\frac{x}{8}\n\\]\n\nGiven that $\\tan K = \\frac{15}{8}$, we can set up the equation:\n\n\\[\n\\frac{x}{8} = \\frac{15}{8}\n\\]\n\nTo solve for $x$, we multiply both sides of the equation by 8:\n\n\\[\nx = 15\n\\]\n\nThus, the length of $JL$ is $\\boxed{15}$.",
+      "steps": [
+        "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+        "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+        "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+        "\\[\n\\tan K = \\frac{x}{8}\n\\]",
+        "Given that $\\tan K = \\frac{15}{8}$, we can set up the equation:",
+        "\\[\n\\frac{x}{8} = \\frac{15}{8}\n\\]",
+        "To solve for $x$, we multiply both sides of the equation by 8:",
+        "\\[\nx = 15\n\\]",
+        "Thus, the length of $JL$ is $\\boxed{15}$."
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is a system/user prompt, not a reasoning step towards solving the math problem.",
+          "coherence_score": 0,
+          "coherence_reason": "The current step is a system/user prompt and does not logically follow from any previous reasoning steps, as there are none.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem."
+          ],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is a direct restatement of the problem, which is redundant and does not contribute new information or progress towards the solution.",
+          "coherence_score": 0,
+          "coherence_reason": "The current step merely copies the problem statement and does not logically follow or build upon any previous reasoning steps, as there were no prior reasoning steps provided.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies the unknown, recalls the definition of tangent, and applies it to the given triangle and angle, which is directly relevant to finding JL.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows the problem statement by setting up the necessary variables and definitions to begin solving the problem.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 3,
+          "step_text": "\\[\n\\tan K = \\frac{x}{8}\n\\]",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+            "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly applies the definition of tangent to the given triangle and variables, directly contributing to finding JL.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step which defined tangent and identified the opposite and adjacent sides in terms of x and 8.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 4,
+          "step_text": "Given that $\\tan K = \\frac{15}{8}$, we can set up the equation:",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+            "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+            "\\[\n\\tan K = \\frac{x}{8}\n\\]"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies and uses a key piece of information provided in the problem statement, which is essential for solving the problem.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step which defined tan K in terms of x and 8, by bringing in the given numerical value for tan K to set up an equation.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 5,
+          "step_text": "\\[\n\\frac{x}{8} = \\frac{15}{8}\n\\]",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+            "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+            "\\[\n\\tan K = \\frac{x}{8}\n\\]",
+            "Given that $\\tan K = \\frac{15}{8}$, we can set up the equation:"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly sets up the equation needed to solve for JL, directly using the information from the problem and previous steps.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step, which stated that tan K = 15/8 and that an equation would be set up using this information and the derived tan K = x/8.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 6,
+          "step_text": "To solve for $x$, we multiply both sides of the equation by 8:",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+            "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+            "\\[\n\\tan K = \\frac{x}{8}\n\\]",
+            "Given that $\\tan K = \\frac{15}{8}$, we can set up the equation:",
+            "\\[\n\\frac{x}{8} = \\frac{15}{8}\n\\]"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step describes the correct algebraic operation to solve for the unknown variable 'x' (which represents JL) from the equation established in the previous step, directly contributing to finding the answer to the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step, which presented the equation to be solved. Multiplying both sides by 8 is the appropriate next action to isolate 'x'.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 7,
+          "step_text": "\\[\nx = 15\n\\]",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+            "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+            "\\[\n\\tan K = \\frac{x}{8}\n\\]",
+            "Given that $\\tan K = \\frac{15}{8}$, we can set up the equation:",
+            "\\[\n\\frac{x}{8} = \\frac{15}{8}\n\\]",
+            "To solve for $x$, we multiply both sides of the equation by 8:"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step directly calculates the value of x, which represents JL, thus contributing directly to solving the problem.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step which stated the intention to multiply both sides of the equation (from step 6) by 8 to solve for x.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 8,
+          "step_text": "Thus, the length of $JL$ is $\\boxed{15}$.",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nIn right triangle $JKL$ with $\\angle JLK = 90^\\circ$, we have $KL = 8$ and $\\tan K = \\frac{15}{8}$.  Find $JL$.",
+            "assistant\n<rationale>Let's denote the length of $JL$ as $x$. Since $\\triangle JKL$ is a right triangle with $\\angle JLK = 90^\\circ$, we can use the definition of tangent to find the relationship between the sides of the triangle. The tangent of an angle in a right triangle is defined as the ratio of the length of the opposite side to the length of the adjacent side. In this case, $\\tan K = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{15}{8}$, where \"opposite\" is $JL$ and \"adjacent\" is $KL$. Therefore, we have:",
+            "\\[\n\\tan K = \\frac{x}{8}\n\\]",
+            "Given that $\\tan K = \\frac{15}{8}$, we can set up the equation:",
+            "\\[\n\\frac{x}{8} = \\frac{15}{8}\n\\]",
+            "To solve for $x$, we multiply both sides of the equation by 8:",
+            "\\[\nx = 15\n\\]"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step states the final answer for JL, which is the objective of the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step directly follows from the previous step where x was solved as 15, and x represents JL.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 9,
+        "step_relevance_mean": 0.7777777777777778,
+        "step_coherence_mean": 0.7777777777777778,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_042",
+      "question": "In the diagram, if $\\angle PQR = 48^\\circ$, what is the measure of $\\angle PMN$? [asy]\n\nsize(6cm);\n\npair p = (0, 0); pair m = dir(180 - 24); pair n = dir(180 + 24); pair r = 1.3 * dir(24); pair q = 2 * 1.3 * Cos(48) * dir(-24);\n\nlabel(\"$M$\", m, N); label(\"$R$\", r, N); label(\"$P$\", p, 1.5 * S); label(\"$N$\", n, S); label(\"$Q$\", q, SE);\n\ndraw(m--q--r--n--cycle);\n\nadd(pathticks(m--p, s=4));\n\nadd(pathticks(n--p, s=4));\n\nadd(pathticks(r--p, 2, spacing=0.9, s=4));\n\nadd(pathticks(r--q, 2, spacing=0.9, s=4));\n\n[/asy]",
+      "answer": "66^\\circ",
+      "rationale": "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[\n\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.\n\\] Subtracting $48^\\circ$ from both sides gives us: \\[\n\\angle PMN + \\angle PNQ = 132^\\circ.\n\\] Since $\\angle PMN$ and $\\angle PNQ$ are equal due to the isosceles property, each angle measures half of $132^\\circ$: \\[\n\\angle PMN = \\frac{132^\\circ}{2} = \\boxed{66^\\circ}.\n\\] This solution follows directly from the properties of isosceles triangles and the given angle measures.</rationale>\n<answer>66^\\circ</answer>",
+      "steps": [
+        "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+        "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+        "\\] Subtracting $48^\\circ$ from both sides gives us: \\[",
+        "\\angle PMN + \\angle PNQ = 132^\\circ.",
+        "\\] Since $\\angle PMN$ and $\\angle PNQ$ are equal due to the isosceles property, each angle measures half of $132^\\circ$: \\[",
+        "\\angle PMN = \\frac{132^\\circ}{2} = \\boxed{66^\\circ}.",
+        "\\] This solution follows directly from the properties of isosceles triangles and the given angle measures.</rationale>",
+        "<answer>66^\\circ</answer>"
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The step makes several incorrect assumptions, such as $\\\u0007ngle PRN = 48^\\\\circ$ and applying the angle sum property to a non-existent triangle formed by $\\\u0007ngle PMN + \\\u0007ngle PNQ + \\\u0007ngle PRN$, which are not relevant to finding $\\\u0007ngle PMN$ based on the given information.",
+          "coherence_score": 0,
+          "coherence_reason": "The step incorrectly states $\\\u0007ngle PRN = 48^\\\\circ$ without any basis, incorrectly equates $\\\u0007ngle PMN = \\\u0007ngle PNQ$ (it should be $\\\u0007ngle PMN = \\\u0007ngle PNM$ if PMN is isosceles), and attempts to sum angles from different parts of the diagram as if they form a single triangle, making it logically incoherent.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\["
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step directly substitutes a value into an equation derived in the previous step, which is aimed at solving the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step is a direct and logical substitution as instructed by the previous reasoning step.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "\\] Subtracting $48^\\circ$ from both sides gives us: \\[",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+            "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step performs an algebraic operation directly on the equation established in the previous step, which is relevant to solving for the unknown angle.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows from the previous step by performing the indicated subtraction on the equation presented.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 3,
+          "step_text": "\\angle PMN + \\angle PNQ = 132^\\circ.",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+            "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+            "\\] Subtracting $48^\\circ$ from both sides gives us: \\["
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step performs a necessary algebraic manipulation to simplify the equation and move towards finding the unknown angle.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous equation by subtracting 48 degrees from both sides, as indicated by the preceding text.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 4,
+          "step_text": "\\] Since $\\angle PMN$ and $\\angle PNQ$ are equal due to the isosceles property, each angle measures half of $132^\\circ$: \\[",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+            "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+            "\\] Subtracting $48^\\circ$ from both sides gives us: \\[",
+            "\\angle PMN + \\angle PNQ = 132^\\circ."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step directly uses the equation derived in the previous step and the stated equality of angles to calculate the target angle, contributing meaningfully to solving the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step's result ($\\angle PMN + \\angle PNQ = 132^\\circ$) and the equality of angles ($\\angle PMN = \\angle PNQ$) asserted in the first reasoning step, even if the initial assertion's justification was flawed.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 5,
+          "step_text": "\\angle PMN = \\frac{132^\\circ}{2} = \\boxed{66^\\circ}.",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+            "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+            "\\] Subtracting $48^\\circ$ from both sides gives us: \\[",
+            "\\angle PMN + \\angle PNQ = 132^\\circ.",
+            "\\] Since $\\angle PMN$ and $\\angle PNQ$ are equal due to the isosceles property, each angle measures half of $132^\\circ$: \\["
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step directly calculates the final answer, which is the goal of the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows from the previous step, which established that the sum of the two equal angles is 132 degrees and that each angle is half of that sum.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 6,
+          "step_text": "\\] This solution follows directly from the properties of isosceles triangles and the given angle measures.</rationale>",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+            "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+            "\\] Subtracting $48^\\circ$ from both sides gives us: \\[",
+            "\\angle PMN + \\angle PNQ = 132^\\circ.",
+            "\\] Since $\\angle PMN$ and $\\angle PNQ$ are equal due to the isosceles property, each angle measures half of $132^\\circ$: \\[",
+            "\\angle PMN = \\frac{132^\\circ}{2} = \\boxed{66^\\circ}."
+          ],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is a concluding statement about the solution, not a step that contributes to finding the answer to the question.",
+          "coherence_score": 0,
+          "coherence_reason": "The previous reasoning steps contain significant errors in applying geometric properties and using given angle measures. Therefore, the claim that 'This solution follows directly from the properties of isosceles triangles and the given angle measures' is not coherent with the flawed preceding steps.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 7,
+          "step_text": "<answer>66^\\circ</answer>",
+          "prior_context": [
+            "<rationale>Since $PMN$ is an isosceles triangle with $\\angle PQR = \\angle PRN = 48^\\circ$, we have $\\angle PMN = \\angle PNQ$. The sum of angles in a triangle is $180^\\circ$, so $\\angle PMN + \\angle PNQ + \\angle PRN = 180^\\circ$. Since $\\angle PRN = 48^\\circ$, we can substitute this value into the equation to find $\\angle PMN$: \\[",
+            "\\angle PMN + \\angle PNQ + 48^\\circ = 180^\\circ.",
+            "\\] Subtracting $48^\\circ$ from both sides gives us: \\[",
+            "\\angle PMN + \\angle PNQ = 132^\\circ.",
+            "\\] Since $\\angle PMN$ and $\\angle PNQ$ are equal due to the isosceles property, each angle measures half of $132^\\circ$: \\[",
+            "\\angle PMN = \\frac{132^\\circ}{2} = \\boxed{66^\\circ}.",
+            "\\] This solution follows directly from the properties of isosceles triangles and the given angle measures.</rationale>"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step provides the final answer to the question, which is the ultimate goal.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step directly states the numerical result derived in the immediately preceding reasoning step.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 8,
+        "step_relevance_mean": 0.75,
+        "step_coherence_mean": 0.75,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_007",
+      "question": "What is the height of Jack's house, in feet, if the house casts a shadow 56 feet long at the same time a 21-foot tree casts a shadow that is 24 feet long? Express your answer to the nearest whole number.",
+      "answer": "30",
+      "rationale": "Problem:\nWhat is the height of Jack's house, in feet, if the house casts a shadow 56 feet long at the same time a 21-foot tree casts a shadow that is 24 feet long? Express your answer to the nearest whole number.\n\nassistant\n<rationale>Let $h$ be the height of Jack's house. The ratio of the height of the house to its shadow length is equal to the ratio of the height of the tree to its shadow length. Therefore, we have $\\frac{h}{56} = \\frac{21}{24}$.</rationale>\n<answer>30</answer>",
+      "steps": [
+        "Problem:\nWhat is the height of Jack's house, in feet, if the house casts a shadow 56 feet long at the same time a 21-foot tree casts a shadow that is 24 feet long? Express your answer to the nearest whole number.",
+        "assistant\n<rationale>Let $h$ be the height of Jack's house. The ratio of the height of the house to its shadow length is equal to the ratio of the height of the tree to its shadow length. Therefore, we have $\\frac{h}{56} = \\frac{21}{24}$.</rationale>\n<answer>30</answer>"
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "Problem:\nWhat is the height of Jack's house, in feet, if the house casts a shadow 56 feet long at the same time a 21-foot tree casts a shadow that is 24 feet long? Express your answer to the nearest whole number.",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is a direct restatement of the problem, which is redundant as the problem is already provided. It does not contribute new information or advance the solution.",
+          "coherence_score": 1,
+          "coherence_reason": "As the first step with no previous reasoning, the restatement of the problem is coherent as the starting point for the reasoning process.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "assistant\n<rationale>Let $h$ be the height of Jack's house. The ratio of the height of the house to its shadow length is equal to the ratio of the height of the tree to its shadow length. Therefore, we have $\\frac{h}{56} = \\frac{21}{24}$.</rationale>\n<answer>30</answer>",
+          "prior_context": [
+            "Problem:\nWhat is the height of Jack's house, in feet, if the house casts a shadow 56 feet long at the same time a 21-foot tree casts a shadow that is 24 feet long? Express your answer to the nearest whole number."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies the unknown variable and sets up the appropriate mathematical relationship (proportion) using the given values, directly addressing the question's goal.",
+          "coherence_score": 1,
+          "coherence_reason": "Following the problem statement, this step logically initiates the solution by defining variables and formulating the core equation based on the problem's conditions.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 2,
+        "step_relevance_mean": 0.5,
+        "step_coherence_mean": 1.0,
+        "all_steps_relevant": false,
+        "all_steps_coherent": true
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_010",
+      "question": "The measures of the sides of a triangle are 7, 24 and 25. What is the area of the triangle?",
+      "answer": "12\\sqrt{42}",
+      "rationale": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.\n\nProblem:\nThe measures of the sides of a triangle are 7, 24 and 25. What is the area of the triangle?\n\nassistant\n<rationale>The triangle with side lengths 7, 24, and 25 has an area given by Heron's formula: \\[A = \\sqrt{s(s-a)(s-b)(s-c)}\\] where \\(a=7\\), \\(b=24\\), and \\(c=25\\) and \\(s=\\frac{7+24+25}{2}=31\\). Substituting these values into the formula gives \\[A = \\sqrt{31(31-7)(31-24)(31-25)} = \\sqrt{31 \\cdot 24 \\cdot 7 \\cdot 6}.\\] Simplifying inside the square root, we get \\[A = \\sqrt{31 \\cdot 24 \\cdot 7 \\cdot 6} = \\sqrt{(2^2 \\cdot 3) \\cdot (2^2 \\cdot 3) \\cdot (7 \\cdot 6)} = \\sqrt{2^4 \\cdot 3^2 \\cdot 7 \\cdot 6} = 2^2 \\cdot 3 \\cdot \\sqrt{7 \\cdot 6} = 4 \\cdot 3 \\cdot \\sqrt{42} = 12 \\sqrt{42}.\\] Therefore, the area of the triangle is $\\boxed{12\\sqrt{42}}$. The answer is 12\\sqrt{42}. </rationale>\n<answer>12\\sqrt{42}</answer>",
+      "steps": [
+        "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+        "Problem:\nThe measures of the sides of a triangle are 7, 24 and 25. What is the area of the triangle?",
+        "assistant\n<rationale>The triangle with side lengths 7, 24, and 25 has an area given by Heron's formula: \\[A = \\sqrt{s(s-a)(s-b)(s-c)}\\] where \\(a=7\\), \\(b=24\\), and \\(c=25\\) and \\(s=\\frac{7+24+25}{2}=31\\). Substituting these values into the formula gives \\[A = \\sqrt{31(31-7)(31-24)(31-25)} = \\sqrt{31 \\cdot 24 \\cdot 7 \\cdot 6}.\\] Simplifying inside the square root, we get \\[A = \\sqrt{31 \\cdot 24 \\cdot 7 \\cdot 6} = \\sqrt{(2^2 \\cdot 3) \\cdot (2^2 \\cdot 3) \\cdot (7 \\cdot 6)} = \\sqrt{2^4 \\cdot 3^2 \\cdot 7 \\cdot 6} = 2^2 \\cdot 3 \\cdot \\sqrt{7 \\cdot 6} = 4 \\cdot 3 \\cdot \\sqrt{42} = 12 \\sqrt{42}.\\] Therefore, the area of the triangle is $\\boxed{12\\sqrt{42}}$. The answer is 12\\sqrt{42}. </rationale>\n<answer>12\\sqrt{42}</answer>"
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is an instruction to an AI model, not a reasoning step towards solving the math problem.",
+          "coherence_score": 0,
+          "coherence_reason": "The current step is an instruction block and does not logically follow from the empty previous reasoning steps in the context of solving the problem.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "Problem:\nThe measures of the sides of a triangle are 7, 24 and 25. What is the area of the triangle?",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step accurately restates the problem, which is directly relevant to solving it.",
+          "coherence_score": 1,
+          "coherence_reason": "Restating the problem is a logical and coherent first step after being asked to solve it.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "assistant\n<rationale>The triangle with side lengths 7, 24, and 25 has an area given by Heron's formula: \\[A = \\sqrt{s(s-a)(s-b)(s-c)}\\] where \\(a=7\\), \\(b=24\\), and \\(c=25\\) and \\(s=\\frac{7+24+25}{2}=31\\). Substituting these values into the formula gives \\[A = \\sqrt{31(31-7)(31-24)(31-25)} = \\sqrt{31 \\cdot 24 \\cdot 7 \\cdot 6}.\\] Simplifying inside the square root, we get \\[A = \\sqrt{31 \\cdot 24 \\cdot 7 \\cdot 6} = \\sqrt{(2^2 \\cdot 3) \\cdot (2^2 \\cdot 3) \\cdot (7 \\cdot 6)} = \\sqrt{2^4 \\cdot 3^2 \\cdot 7 \\cdot 6} = 2^2 \\cdot 3 \\cdot \\sqrt{7 \\cdot 6} = 4 \\cdot 3 \\cdot \\sqrt{42} = 12 \\sqrt{42}.\\] Therefore, the area of the triangle is $\\boxed{12\\sqrt{42}}$. The answer is 12\\sqrt{42}. </rationale>\n<answer>12\\sqrt{42}</answer>",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nThe measures of the sides of a triangle are 7, 24 and 25. What is the area of the triangle?"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly identifies a formula (Heron's formula) to calculate the area of a triangle given its side lengths, which is directly relevant to the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The step logically follows the problem statement by immediately attempting to solve it using a standard mathematical formula.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 3,
+        "step_relevance_mean": 0.6666666666666666,
+        "step_coherence_mean": 0.6666666666666666,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_011",
+      "question": "Compute $\\sin 0^\\circ$.",
+      "answer": "0",
+      "rationale": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.\n\nProblem:\nCompute $\\sin 0^\\circ$.\n\nassistant\n<rationale>Since $0^\\circ$ is an angle in the first quadrant of the unit circle, its sine value is equal to the y-coordinate of the point where the terminal side of the angle intersects the unit circle.</rationale>\n<answer>0</answer>",
+      "steps": [
+        "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+        "Problem:\nCompute $\\sin 0^\\circ$.",
+        "assistant\n<rationale>Since $0^\\circ$ is an angle in the first quadrant of the unit circle, its sine value is equal to the y-coordinate of the point where the terminal side of the angle intersects the unit circle.</rationale>\n<answer>0</answer>"
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is a system/user prompt for an AI, not a step towards computing sin 0 degrees.",
+          "coherence_score": 0,
+          "coherence_reason": "The current step is a meta-instruction to an AI, not a logical start to solving the mathematical problem from an empty previous step.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "Problem:\nCompute $\\sin 0^\\circ$.",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step accurately restates the problem given in the question, which is fundamental to solving it.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows the previous steps, where the user requested to solve a math problem and the system is now presenting that problem.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "assistant\n<rationale>Since $0^\\circ$ is an angle in the first quadrant of the unit circle, its sine value is equal to the y-coordinate of the point where the terminal side of the angle intersects the unit circle.</rationale>\n<answer>0</answer>",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nCompute $\\sin 0^\\circ$."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The step correctly defines sine in terms of the unit circle and y-coordinate, which is relevant to computing sin 0°.",
+          "coherence_score": 1,
+          "coherence_reason": "This is the first reasoning step and logically introduces the method for calculating the sine of the given angle.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 3,
+        "step_relevance_mean": 0.6666666666666666,
+        "step_coherence_mean": 0.6666666666666666,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_043",
+      "question": "Khali has to shovel snow off the sidewalk in front of his house. The sidewalk is 20 feet long and 2 feet wide. If the snow is $\\frac{1}{2}$ foot deep, how many cubic feet of snow does Khali have to shovel off the sidewalk?",
+      "answer": "40",
+      "rationale": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.\n\nProblem:\nKhali has to shovel snow off the sidewalk in front of his house. The sidewalk is 20 feet long and 2 feet wide. If the snow is $\\frac{1}{2}$ foot deep, how many cubic feet of snow does Khali have to shovel off the sidewalk?\n\nassistant\n<rationale>To calculate the volume of snow that needs to be shoveled, we multiply the length of the sidewalk (in this case, 20 feet) by its width (2 feet), then multiply that product by the depth of the snow ($\\frac{1}{2}$ foot). This gives us $20 \\times 2 \\times \\frac{1}{2} = 40$ cubic feet. Therefore, Khali has to shovel 40 cubic feet of snow off the sidewalk.</rationale>\n<answer>40</answer>",
+      "steps": [
+        "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+        "Problem:\nKhali has to shovel snow off the sidewalk in front of his house. The sidewalk is 20 feet long and 2 feet wide. If the snow is $\\frac{1}{2}$ foot deep, how many cubic feet of snow does Khali have to shovel off the sidewalk?",
+        "assistant\n<rationale>To calculate the volume of snow that needs to be shoveled, we multiply the length of the sidewalk (in this case, 20 feet) by its width (2 feet), then multiply that product by the depth of the snow ($\\frac{1}{2}$ foot). This gives us $20 \\times 2 \\times \\frac{1}{2} = 40$ cubic feet. Therefore, Khali has to shovel 40 cubic feet of snow off the sidewalk.</rationale>\n<answer>40</answer>"
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is an instruction to an AI, not a step in solving the math problem.",
+          "coherence_score": 0,
+          "coherence_reason": "The current step is an instruction block and does not logically follow from any previous problem-solving steps, as there are none.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "Problem:\nKhali has to shovel snow off the sidewalk in front of his house. The sidewalk is 20 feet long and 2 feet wide. If the snow is $\\frac{1}{2}$ foot deep, how many cubic feet of snow does Khali have to shovel off the sidewalk?",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step accurately restates the problem, which is a necessary initial step for solving it.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows the user's request to solve the problem by presenting the problem statement itself.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "assistant\n<rationale>To calculate the volume of snow that needs to be shoveled, we multiply the length of the sidewalk (in this case, 20 feet) by its width (2 feet), then multiply that product by the depth of the snow ($\\frac{1}{2}$ foot). This gives us $20 \\times 2 \\times \\frac{1}{2} = 40$ cubic feet. Therefore, Khali has to shovel 40 cubic feet of snow off the sidewalk.</rationale>\n<answer>40</answer>",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nKhali has to shovel snow off the sidewalk in front of his house. The sidewalk is 20 feet long and 2 feet wide. If the snow is $\\frac{1}{2}$ foot deep, how many cubic feet of snow does Khali have to shovel off the sidewalk?"
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step directly calculates the volume of snow, which is what the question asks for.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step immediately provides the solution to the problem stated in the previous steps, which is a logical progression.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 3,
+        "step_relevance_mean": 0.6666666666666666,
+        "step_coherence_mean": 0.6666666666666666,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    },
+    {
+      "id": "geom_eh100_045",
+      "question": "Compute $\\cos 120^\\circ$.",
+      "answer": "\\boxed{-\\frac{1}{2}}",
+      "rationale": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.\n\nProblem:\nCompute $\\cos 120^\\circ$.\n\nassistant\n<rationale>Using the unit circle, we know that $\\cos 120^\\circ = -\\frac{1}{2}$. Therefore, the answer is \\boxed{-\\frac{1}{2}}.</rationale>\n<answer>\\boxed{-\\frac{1}{2}}</answer>",
+      "steps": [
+        "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+        "Problem:\nCompute $\\cos 120^\\circ$.",
+        "assistant\n<rationale>Using the unit circle, we know that $\\cos 120^\\circ = -\\frac{1}{2}$. Therefore, the answer is \\boxed{-\\frac{1}{2}}.</rationale>\n<answer>\\boxed{-\\frac{1}{2}}</answer>"
+      ],
+      "step_evaluations": [
+        {
+          "step_index": 0,
+          "step_text": "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+          "prior_context": [],
+          "relevance_score": 0,
+          "relevance_reason": "The current step is a system/user prompt, not a step towards computing cos 120 degrees.",
+          "coherence_score": 0,
+          "coherence_reason": "The current step is an instruction to an AI, not a logical mathematical step to begin solving the problem.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 1,
+          "step_text": "Problem:\nCompute $\\cos 120^\\circ$.",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step accurately restates the problem, which is directly relevant to the question.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step logically follows the user's request to solve the problem by presenting the problem statement itself.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        },
+        {
+          "step_index": 2,
+          "step_text": "assistant\n<rationale>Using the unit circle, we know that $\\cos 120^\\circ = -\\frac{1}{2}$. Therefore, the answer is \\boxed{-\\frac{1}{2}}.</rationale>\n<answer>\\boxed{-\\frac{1}{2}}</answer>",
+          "prior_context": [
+            "system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nuser\nSolve the following math problem.",
+            "Problem:\nCompute $\\cos 120^\\circ$."
+          ],
+          "relevance_score": 1,
+          "relevance_reason": "The current step directly answers the question by providing the value of cos 120 degrees.",
+          "coherence_score": 1,
+          "coherence_reason": "The current step directly addresses the problem posed in the previous steps without any prior reasoning to build upon, making it coherent as a first step towards solving the problem.",
+          "judge_model": "gemini-2.5-flash",
+          "judge_backend": "vertex_ai_gemini"
+        }
+      ],
+      "example_metrics": {
+        "num_steps": 3,
+        "step_relevance_mean": 0.6666666666666666,
+        "step_coherence_mean": 0.6666666666666666,
+        "all_steps_relevant": false,
+        "all_steps_coherent": false
+      },
+      "error": null
+    }
+  ]
+}

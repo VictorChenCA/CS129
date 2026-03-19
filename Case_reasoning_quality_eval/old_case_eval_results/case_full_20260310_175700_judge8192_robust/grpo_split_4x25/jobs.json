@@ -1,0 +1,93 @@
+{
+  "grpo_001_025": {
+    "pid": 20904,
+    "cmd": [
+      "C:\\Users\\maxlr\\miniconda3\\python.exe",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+      "--input_jsonl",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_001_025_input.jsonl",
+      "--output_json",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_001_025_case_eval_results.json",
+      "--requests_per_minute",
+      "12",
+      "--max_retries",
+      "10",
+      "--max_retry_delay",
+      "60"
+    ],
+    "stdout": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_001_025_case_eval.out",
+    "stderr": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_001_025_case_eval.err",
+    "output_json": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_001_025_case_eval_results.json"
+  },
+  "grpo_026_050": {
+    "pid": 19452,
+    "cmd": [
+      "C:\\Users\\maxlr\\miniconda3\\python.exe",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+      "--input_jsonl",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_026_050_input.jsonl",
+      "--output_json",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_026_050_case_eval_results.json",
+      "--requests_per_minute",
+      "12",
+      "--max_retries",
+      "10",
+      "--max_retry_delay",
+      "60"
+    ],
+    "stdout": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_026_050_case_eval.out",
+    "stderr": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_026_050_case_eval.err",
+    "output_json": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_026_050_case_eval_results.json"
+  },
+  "grpo_051_075": {
+    "pid": 376,
+    "cmd": [
+      "C:\\Users\\maxlr\\miniconda3\\python.exe",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+      "--input_jsonl",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_051_075_input.jsonl",
+      "--output_json",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_051_075_case_eval_results.json",
+      "--requests_per_minute",
+      "12",
+      "--max_retries",
+      "10",
+      "--max_retry_delay",
+      "60"
+    ],
+    "stdout": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_051_075_case_eval.out",
+    "stderr": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_051_075_case_eval.err",
+    "output_json": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_051_075_case_eval_results.json"
+  },
+  "grpo_076_100": {
+    "pid": 29144,
+    "cmd": [
+      "C:\\Users\\maxlr\\miniconda3\\python.exe",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+      "--input_jsonl",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_076_100_input.jsonl",
+      "--output_json",
+      "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_076_100_case_eval_results.json",
+      "--requests_per_minute",
+      "12",
+      "--max_retries",
+      "10",
+      "--max_retry_delay",
+      "60"
+    ],
+    "stdout": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_076_100_case_eval.out",
+    "stderr": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_076_100_case_eval.err",
+    "output_json": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_076_100_case_eval_results.json"
+  },
+  "merge_command": [
+    "C:\\Users\\maxlr\\miniconda3\\python.exe",
+    "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\merge_case_eval_results.py",
+    "--inputs",
+    "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_001_025_case_eval_results.json",
+    "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_026_050_case_eval_results.json",
+    "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_051_075_case_eval_results.json",
+    "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_split_4x25\\grpo_076_100_case_eval_results.json",
+    "--output",
+    "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_full_20260310_175700_judge8192_robust\\grpo_case_eval_results.json"
+  ]
+}

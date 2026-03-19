@@ -1,0 +1,19 @@
+{
+  "merged_150": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_distilled_full150_search_20260315\\geometry_distilled_full150_case_eval_merged.json",
+  "top50_jsonl": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_distilled_full150_search_20260315\\geometry_distilled_top50_from150_case_eval.jsonl",
+  "top50_merged_json": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_distilled_full150_search_20260315\\geometry_distilled_top50_from150_case_eval_merged.json",
+  "top50_summary": {
+    "total_examples_loaded": 50,
+    "total_examples_evaluated": 50,
+    "total_examples_skipped": 0,
+    "total_steps_evaluated": 253,
+    "mean_step_relevance": 0.525691699604743,
+    "mean_step_coherence": 0.6245059288537549,
+    "mean_example_relevance": 0.5428894584947216,
+    "mean_example_coherence": 0.6049153945469734,
+    "fraction_examples_all_steps_relevant": 0.04,
+    "fraction_examples_all_steps_coherent": 0.08,
+    "fraction_examples_with_any_irrelevant_step": 0.96,
+    "fraction_examples_with_any_incoherent_step": 0.92
+  }
+}

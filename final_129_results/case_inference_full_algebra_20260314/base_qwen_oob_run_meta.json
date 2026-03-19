@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "run_name": "case_final129_full_algebra_20260314",
+  "dataset": {
+    "hf_dataset": "EleutherAI/hendrycks_math",
+    "subset": "algebra",
+    "split": "test",
+    "num_examples": 1187
+  },
+  "model": {
+    "key": "base_qwen_oob",
+    "display_name": "Qwen2.5-0.5B Out-of-Box",
+    "path": "Qwen/Qwen2.5-0.5B-Instruct",
+    "resolved_model_source": "Qwen/Qwen2.5-0.5B-Instruct",
+    "model_kind": "full_model",
+    "base_model_name": "Qwen/Qwen2.5-0.5B-Instruct"
+  },
+  "prompt": {
+    "style": "distilled_multitask",
+    "system_prompt": null,
+    "user_template": "Solve the following math problem.\n\nProblem:\n{problem}\n",
+    "source_files": [
+      "distilling_step_by_step-gemini/train/train_model_multitask_stratified.py",
+      "distilling_step_by_step-gemini/eval/eval_stratified_heldout_modal.py"
+    ],
+    "source_note": "Out-of-box Qwen baseline evaluated with the same user-only prompt style as the distilled model for direct CaSE comparison.",
+    "expected_output_format": "free-form reasoning; answer extracted from <answer>, \\boxed{}, or final line"
+  },
+  "generation": {
+    "max_new_tokens": 2048,
+    "prompt_max_length": 4096,
+    "batch_size": 1,
+    "do_sample": false,
+    "num_beams": 1
+  },
+  "artifacts": {
+    "output_jsonl": "/outputs/case_reasoning_quality_eval/case_final129_full_algebra_20260314/base_qwen_oob/base_qwen_oob_case_eval.jsonl",
+    "output_meta_json": "/outputs/case_reasoning_quality_eval/case_final129_full_algebra_20260314/base_qwen_oob/base_qwen_oob_run_meta.json"
+  },
+  "service_account_env_present": true
+}

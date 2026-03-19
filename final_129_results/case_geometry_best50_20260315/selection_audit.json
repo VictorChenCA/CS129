@@ -1,0 +1,452 @@
+[
+  {
+    "rank": 0,
+    "orig_index": 42,
+    "score": 127.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 128
+  },
+  {
+    "rank": 1,
+    "orig_index": 1,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 212
+  },
+  {
+    "rank": 2,
+    "orig_index": 3,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 159
+  },
+  {
+    "rank": 3,
+    "orig_index": 6,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 78
+  },
+  {
+    "rank": 4,
+    "orig_index": 13,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 64
+  },
+  {
+    "rank": 5,
+    "orig_index": 17,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 298
+  },
+  {
+    "rank": 6,
+    "orig_index": 30,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 184
+  },
+  {
+    "rank": 7,
+    "orig_index": 41,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 236
+  },
+  {
+    "rank": 8,
+    "orig_index": 48,
+    "score": 122.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 88
+  },
+  {
+    "rank": 9,
+    "orig_index": 65,
+    "score": 122.0,
+    "split": "medium",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 102
+  },
+  {
+    "rank": 10,
+    "orig_index": 87,
+    "score": 122.0,
+    "split": "medium",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 143
+  },
+  {
+    "rank": 11,
+    "orig_index": 120,
+    "score": 122.0,
+    "split": "hard",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 71
+  },
+  {
+    "rank": 12,
+    "orig_index": 49,
+    "score": 119.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 88
+  },
+  {
+    "rank": 13,
+    "orig_index": 14,
+    "score": 114.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 80
+  },
+  {
+    "rank": 14,
+    "orig_index": 29,
+    "score": 114.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 175
+  },
+  {
+    "rank": 15,
+    "orig_index": 11,
+    "score": 112.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": false,
+    "response_words": 60
+  },
+  {
+    "rank": 16,
+    "orig_index": 20,
+    "score": 112.0,
+    "split": "easy",
+    "is_correct": true,
+    "used_boxed_format": false,
+    "response_words": 129
+  },
+  {
+    "rank": 17,
+    "orig_index": 89,
+    "score": 112.0,
+    "split": "medium",
+    "is_correct": true,
+    "used_boxed_format": false,
+    "response_words": 81
+  },
+  {
+    "rank": 18,
+    "orig_index": 128,
+    "score": 112.0,
+    "split": "hard",
+    "is_correct": true,
+    "used_boxed_format": true,
+    "response_words": 455
+  },
+  {
+    "rank": 19,
+    "orig_index": 9,
+    "score": 27.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 126
+  },
+  {
+    "rank": 20,
+    "orig_index": 28,
+    "score": 27.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 40
+  },
+  {
+    "rank": 21,
+    "orig_index": 36,
+    "score": 27.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 63
+  },
+  {
+    "rank": 22,
+    "orig_index": 54,
+    "score": 27.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 269
+  },
+  {
+    "rank": 23,
+    "orig_index": 64,
+    "score": 27.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 183
+  },
+  {
+    "rank": 24,
+    "orig_index": 79,
+    "score": 27.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 118
+  },
+  {
+    "rank": 25,
+    "orig_index": 88,
+    "score": 27.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 89
+  },
+  {
+    "rank": 26,
+    "orig_index": 95,
+    "score": 27.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 237
+  },
+  {
+    "rank": 27,
+    "orig_index": 99,
+    "score": 27.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 213
+  },
+  {
+    "rank": 28,
+    "orig_index": 139,
+    "score": 27.0,
+    "split": "hard",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 66
+  },
+  {
+    "rank": 29,
+    "orig_index": 2,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 77
+  },
+  {
+    "rank": 30,
+    "orig_index": 4,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 99
+  },
+  {
+    "rank": 31,
+    "orig_index": 8,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 57
+  },
+  {
+    "rank": 32,
+    "orig_index": 10,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 152
+  },
+  {
+    "rank": 33,
+    "orig_index": 15,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 117
+  },
+  {
+    "rank": 34,
+    "orig_index": 19,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 150
+  },
+  {
+    "rank": 35,
+    "orig_index": 23,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 86
+  },
+  {
+    "rank": 36,
+    "orig_index": 24,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 111
+  },
+  {
+    "rank": 37,
+    "orig_index": 26,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 138
+  },
+  {
+    "rank": 38,
+    "orig_index": 27,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 213
+  },
+  {
+    "rank": 39,
+    "orig_index": 31,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 156
+  },
+  {
+    "rank": 40,
+    "orig_index": 34,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 152
+  },
+  {
+    "rank": 41,
+    "orig_index": 35,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 109
+  },
+  {
+    "rank": 42,
+    "orig_index": 39,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 165
+  },
+  {
+    "rank": 43,
+    "orig_index": 44,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 134
+  },
+  {
+    "rank": 44,
+    "orig_index": 45,
+    "score": 22.0,
+    "split": "easy",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 41
+  },
+  {
+    "rank": 45,
+    "orig_index": 51,
+    "score": 22.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 129
+  },
+  {
+    "rank": 46,
+    "orig_index": 52,
+    "score": 22.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 141
+  },
+  {
+    "rank": 47,
+    "orig_index": 53,
+    "score": 22.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 169
+  },
+  {
+    "rank": 48,
+    "orig_index": 55,
+    "score": 22.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 119
+  },
+  {
+    "rank": 49,
+    "orig_index": 56,
+    "score": 22.0,
+    "split": "medium",
+    "is_correct": false,
+    "used_boxed_format": true,
+    "response_words": 182
+  }
+]

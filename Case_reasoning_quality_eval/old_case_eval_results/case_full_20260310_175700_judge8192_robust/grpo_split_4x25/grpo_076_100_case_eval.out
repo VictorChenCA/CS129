@@ -1,0 +1,39 @@
+[progress] example 1/25 id=algebra_test_0075 parse_success=true steps=5 judged_steps=5 ok=1 skipped=0 mean_rel=0.800 mean_coh=0.200 error=none
+[progress] example 2/25 id=algebra_test_0076 parse_success=true steps=2 judged_steps=2 ok=2 skipped=0 mean_rel=1.000 mean_coh=0.500 error=none
+[progress] example 3/25 id=algebra_test_0077 parse_success=true steps=2 judged_steps=2 ok=3 skipped=0 mean_rel=1.000 mean_coh=0.500 error=none
+[progress] example 4/25 id=algebra_test_0078 parse_success=true steps=2 judged_steps=2 ok=4 skipped=0 mean_rel=1.000 mean_coh=0.000 error=none
+[progress] example 5/25 id=algebra_test_0079 parse_success=true steps=3 judged_steps=3 ok=5 skipped=0 mean_rel=0.000 mean_coh=0.000 error=none
+[progress] example 6/25 id=algebra_test_0080 parse_success=true steps=4 judged_steps=4 ok=6 skipped=0 mean_rel=0.750 mean_coh=0.500 error=none
+[progress] example 7/25 id=algebra_test_0081 parse_success=true steps=4 judged_steps=4 ok=7 skipped=0 mean_rel=0.500 mean_coh=0.500 error=none
+[progress] example 8/25 id=algebra_test_0082 parse_success=true steps=4 judged_steps=4 ok=8 skipped=0 mean_rel=0.000 mean_coh=0.500 error=none
+[progress] example 9/25 id=algebra_test_0083 parse_success=true steps=3 judged_steps=3 ok=9 skipped=0 mean_rel=0.000 mean_coh=0.333 error=none
+[progress] example 10/25 id=algebra_test_0084 parse_success=true steps=1 judged_steps=1 ok=10 skipped=0 mean_rel=1.000 mean_coh=1.000 error=none
+[progress] example 11/25 id=algebra_test_0085 parse_success=false steps=249 judged_steps=8 ok=10 skipped=1 mean_rel=- mean_coh=- error=judge_timeout@step8
+[progress] example 12/25 id=algebra_test_0086 parse_success=true steps=1 judged_steps=1 ok=11 skipped=1 mean_rel=1.000 mean_coh=1.000 error=none
+[progress] example 13/25 id=algebra_test_0087 parse_success=true steps=4 judged_steps=4 ok=12 skipped=1 mean_rel=0.750 mean_coh=0.250 error=none
+[progress] example 14/25 id=algebra_test_0088 parse_success=true steps=4 judged_steps=4 ok=13 skipped=1 mean_rel=1.000 mean_coh=0.750 error=none
+[progress] example 15/25 id=algebra_test_0089 parse_success=true steps=3 judged_steps=3 ok=14 skipped=1 mean_rel=1.000 mean_coh=1.000 error=none
+[progress] example 16/25 id=algebra_test_0090 parse_success=true steps=2 judged_steps=2 ok=15 skipped=1 mean_rel=0.500 mean_coh=0.000 error=none
+[progress] example 17/25 id=algebra_test_0091 parse_success=true steps=5 judged_steps=5 ok=16 skipped=1 mean_rel=0.600 mean_coh=0.200 error=none
+[progress] example 18/25 id=algebra_test_0092 parse_success=true steps=4 judged_steps=4 ok=17 skipped=1 mean_rel=1.000 mean_coh=0.250 error=none
+[progress] example 19/25 id=algebra_test_0093 parse_success=false steps=11 judged_steps=10 ok=17 skipped=2 mean_rel=- mean_coh=- error=judge_timeout@step10
+[progress] example 20/25 id=algebra_test_0094 parse_success=true steps=6 judged_steps=6 ok=18 skipped=2 mean_rel=1.000 mean_coh=0.833 error=none
+[progress] example 21/25 id=algebra_test_0095 parse_success=true steps=6 judged_steps=6 ok=19 skipped=2 mean_rel=0.667 mean_coh=0.500 error=none
+[progress] example 22/25 id=algebra_test_0096 parse_success=true steps=3 judged_steps=3 ok=20 skipped=2 mean_rel=0.333 mean_coh=0.333 error=none
+[progress] example 23/25 id=algebra_test_0097 parse_success=true steps=4 judged_steps=4 ok=21 skipped=2 mean_rel=1.000 mean_coh=0.750 error=none
+[progress] example 24/25 id=algebra_test_0098 parse_success=true steps=7 judged_steps=7 ok=22 skipped=2 mean_rel=0.286 mean_coh=0.429 error=none
+[progress] example 25/25 id=algebra_test_0099 parse_success=true steps=3 judged_steps=3 ok=23 skipped=2 mean_rel=1.000 mean_coh=0.667 error=none
+
+===== CaSE Evaluation Summary =====
+Examples loaded: 25
+Examples evaluated: 23
+Examples skipped: 2
+Steps evaluated: 82
+Mean step relevance: 0.6707
+Mean step coherence: 0.4634
+Mean example relevance: 0.7037
+Mean example coherence: 0.4781
+Fraction examples all steps relevant: 0.4783
+Fraction examples all steps coherent: 0.1304
+Fraction examples with any irrelevant step: 0.5217
+Fraction examples with any incoherent step: 0.8696

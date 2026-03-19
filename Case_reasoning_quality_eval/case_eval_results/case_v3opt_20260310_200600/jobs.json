@@ -1,0 +1,136 @@
+{
+  "run_name": "case_v3opt_20260310_200600",
+  "jsonl_dir": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\jsonl_model_output_for_CaSE\\case_v3opt_20260310_200600",
+  "results_dir": "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_v3opt_20260310_200600",
+  "distilled_eval_pid": 32240,
+  "modal_jobs": {
+    "sft": {
+      "returncode": 1,
+      "stdout": "Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.\n",
+      "stderr": "+- Error ---------------------------------------------------------------------+\n| 'charmap' codec can't encode character '\\u2713' in position 0: character    |\n| maps to <undefined>                                                         |\n+-----------------------------------------------------------------------------+\n",
+      "cmd": [
+        "modal",
+        "run",
+        "--detach",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\parallel_model_inference_for_CaSE.py",
+        "--model-key",
+        "sft",
+        "--run-name",
+        "case_v3opt_20260310_200600",
+        "--limit",
+        "100",
+        "--max-new-tokens",
+        "8192",
+        "--prompt-max-length",
+        "8192",
+        "--batch-size",
+        "1"
+      ]
+    },
+    "grpo": {
+      "returncode": 1,
+      "stdout": "Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.\n",
+      "stderr": "+- Error ---------------------------------------------------------------------+\n| 'charmap' codec can't encode character '\\u2713' in position 0: character    |\n| maps to <undefined>                                                         |\n+-----------------------------------------------------------------------------+\n",
+      "cmd": [
+        "modal",
+        "run",
+        "--detach",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\parallel_model_inference_for_CaSE.py",
+        "--model-key",
+        "grpo",
+        "--run-name",
+        "case_v3opt_20260310_200600",
+        "--limit",
+        "100",
+        "--max-new-tokens",
+        "8192",
+        "--prompt-max-length",
+        "8192",
+        "--batch-size",
+        "1"
+      ]
+    },
+    "targeted_dapo": {
+      "returncode": 1,
+      "stdout": "Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.\n",
+      "stderr": "+- Error ---------------------------------------------------------------------+\n| 'charmap' codec can't encode character '\\u2713' in position 0: character    |\n| maps to <undefined>                                                         |\n+-----------------------------------------------------------------------------+\n",
+      "cmd": [
+        "modal",
+        "run",
+        "--detach",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\parallel_model_inference_for_CaSE.py",
+        "--model-key",
+        "targeted_dapo",
+        "--run-name",
+        "case_v3opt_20260310_200600",
+        "--limit",
+        "100",
+        "--max-new-tokens",
+        "8192",
+        "--prompt-max-length",
+        "8192",
+        "--batch-size",
+        "1"
+      ]
+    }
+  },
+  "started_case_eval": {
+    "grpo": {
+      "pid": 14784,
+      "cmd": [
+        "C:\\Users\\maxlr\\miniconda3\\python.exe",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+        "--input_jsonl",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\jsonl_model_output_for_CaSE\\case_v3opt_20260310_200600\\grpo_case_eval.jsonl",
+        "--output_json",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_v3opt_20260310_200600\\grpo_case_eval_results.json",
+        "--requests_per_minute",
+        "12",
+        "--max_retries",
+        "10",
+        "--max_retry_delay",
+        "60",
+        "--example_timeout_seconds",
+        "120"
+      ]
+    },
+    "targeted_dapo": {
+      "pid": 20344,
+      "cmd": [
+        "C:\\Users\\maxlr\\miniconda3\\python.exe",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+        "--input_jsonl",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\jsonl_model_output_for_CaSE\\case_v3opt_20260310_200600\\targeted_dapo_case_eval.jsonl",
+        "--output_json",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_v3opt_20260310_200600\\targeted_dapo_case_eval_results.json",
+        "--requests_per_minute",
+        "12",
+        "--max_retries",
+        "10",
+        "--max_retry_delay",
+        "60",
+        "--example_timeout_seconds",
+        "120"
+      ]
+    },
+    "sft": {
+      "pid": 21576,
+      "cmd": [
+        "C:\\Users\\maxlr\\miniconda3\\python.exe",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval.py",
+        "--input_jsonl",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\jsonl_model_output_for_CaSE\\case_v3opt_20260310_200600\\sft_case_eval.jsonl",
+        "--output_json",
+        "c:\\Users\\maxlr\\CS224n\\Case_reasoning_quality_eval\\case_eval_results\\case_v3opt_20260310_200600\\sft_case_eval_results.json",
+        "--requests_per_minute",
+        "12",
+        "--max_retries",
+        "10",
+        "--max_retry_delay",
+        "60",
+        "--example_timeout_seconds",
+        "120"
+      ]
+    }
+  }
+}

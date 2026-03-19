@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "selection": "50 matched geometry problems sampled from shared detailed_results rows",
+  "source_files": {
+    "base_summary": "C:\\Users\\maxlr\\CS224n\\distilling_step_by_step-gemini\\results\\qwen25_05b_baseline_eval_geometry\\heldout_eval_summary.json",
+    "distilled_summary": "C:\\Users\\maxlr\\CS224n\\distilling_step_by_step-gemini\\results\\final_report_subject_sweep_local_20260314_042600_eval_geometry_geometry\\heldout_eval_summary.json"
+  },
+  "output_files": {
+    "base_jsonl": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_50_20260315\\base_qwen_oob_geometry_case_eval_50.jsonl",
+    "distilled_jsonl": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_50_20260315\\geometry_distilled_multitask_case_eval_50.jsonl"
+  },
+  "shared_problem_count": 150,
+  "selected_count": 50,
+  "selected_split_counts": {
+    "easy": 16,
+    "medium": 15,
+    "hard": 19
+  }
+}

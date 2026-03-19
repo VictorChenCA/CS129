@@ -1,0 +1,8 @@
+{
+  "source_merged": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_easyhard100_search_20260315\\geom_eh100_merged.json",
+  "selected_jsonl": "C:\\Users\\maxlr\\CS224n\\final_129_results\\case_geometry_best50_easyhard_caseguided_20260315\\geometry_distilled_best50_caseguided.jsonl",
+  "selected_count": 50,
+  "mean_composite_top50": 0.4942113237639553,
+  "mean_rel_top50": 0.4594909622541201,
+  "mean_coh_top50": 0.5289316852737905
+}

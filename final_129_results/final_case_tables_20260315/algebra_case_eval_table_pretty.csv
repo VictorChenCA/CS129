@@ -1,0 +1,3 @@
+domain,model_label,examples_loaded,examples_evaluated,examples_skipped,mean_step_relevance,mean_step_coherence,mean_example_relevance,mean_example_coherence,all_steps_relevant_frac,all_steps_coherent_frac,eval_coverage
+algebra,baseline_qwen_oob_algebra,105,99,6,0.8580183276059564,0.8763195876288661,0.8224141414141414,0.8317474747474748,0.5353535353535354,0.4646464646464646,0.9428571428571428
+algebra,algebra_distilled_multitask,105,101,4,0.6977405541561712,0.7456498740554157,0.6926732673267326,0.7311188118811881,0.4158415841584158,0.396039603960396,0.9619047619047619

@@ -1,0 +1,9 @@
+[progress] example 1/1187 id=algebra_test_0000 parse_success=true steps=2 judged_steps=2 ok=1 skipped=0 mean_rel=1.000 mean_coh=0.500 error=none
+[progress] example 2/1187 id=algebra_test_0001 parse_success=true steps=8 judged_steps=8 ok=2 skipped=0 mean_rel=1.000 mean_coh=1.000 error=none
+[progress] example 3/1187 id=algebra_test_0002 parse_success=true steps=22 judged_steps=22 ok=3 skipped=0 mean_rel=0.727 mean_coh=0.773 error=none
+[progress] example 4/1187 id=algebra_test_0003 parse_success=true steps=3 judged_steps=3 ok=4 skipped=0 mean_rel=0.667 mean_coh=0.667 error=none
+[progress] example 5/1187 id=algebra_test_0004 parse_success=false steps=15 judged_steps=13 ok=4 skipped=1 mean_rel=- mean_coh=- error=judge_timeout@step13
+[progress] example 6/1187 id=algebra_test_0005 parse_success=true steps=9 judged_steps=9 ok=5 skipped=1 mean_rel=1.000 mean_coh=1.000 error=none
+[progress] example 7/1187 id=algebra_test_0006 parse_success=true steps=3 judged_steps=3 ok=6 skipped=1 mean_rel=1.000 mean_coh=0.667 error=none
+[progress] example 8/1187 id=algebra_test_0007 parse_success=true steps=19 judged_steps=19 ok=7 skipped=1 mean_rel=1.000 mean_coh=0.947 error=none
+[progress] example 9/1187 id=algebra_test_0008 parse_success=true steps=11 judged_steps=11 ok=8 skipped=1 mean_rel=0.273 mean_coh=0.636 error=none

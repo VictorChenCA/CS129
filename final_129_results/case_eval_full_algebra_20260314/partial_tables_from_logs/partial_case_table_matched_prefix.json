@@ -1,0 +1,32 @@
+{
+  "base_qwen_oob": {
+    "processed_examples": 105,
+    "total_examples": 1187,
+    "coverage_fraction": 0.08845829823083404,
+    "ok_examples": 99,
+    "skipped_examples": 6,
+    "mean_step_relevance": 0.8580183276059564,
+    "mean_step_coherence": 0.8763195876288661,
+    "mean_example_relevance": 0.8224141414141414,
+    "mean_example_coherence": 0.8317474747474748,
+    "fraction_examples_all_steps_relevant": 0.5353535353535354,
+    "fraction_examples_all_steps_coherent": 0.46464646464646464,
+    "fraction_examples_with_any_irrelevant_step": 0.46464646464646464,
+    "fraction_examples_with_any_incoherent_step": 0.5353535353535354
+  },
+  "algebra_distilled_multitask": {
+    "processed_examples": 105,
+    "total_examples": 1187,
+    "coverage_fraction": 0.08845829823083404,
+    "ok_examples": 101,
+    "skipped_examples": 4,
+    "mean_step_relevance": 0.6977405541561712,
+    "mean_step_coherence": 0.7456498740554157,
+    "mean_example_relevance": 0.6926732673267326,
+    "mean_example_coherence": 0.7311188118811881,
+    "fraction_examples_all_steps_relevant": 0.4158415841584158,
+    "fraction_examples_all_steps_coherent": 0.39603960396039606,
+    "fraction_examples_with_any_irrelevant_step": 0.5841584158415841,
+    "fraction_examples_with_any_incoherent_step": 0.6039603960396039
+  }
+}

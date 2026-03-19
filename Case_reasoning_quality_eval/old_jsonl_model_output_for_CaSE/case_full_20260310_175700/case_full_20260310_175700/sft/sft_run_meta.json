@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "run_name": "case_full_20260310_175700",
+  "dataset": {
+    "hf_dataset": "EleutherAI/hendrycks_math",
+    "subset": "algebra",
+    "split": "test",
+    "num_examples": 100
+  },
+  "model": {
+    "key": "sft",
+    "display_name": "SFT",
+    "path": "gs://checkpoints-cs224n/final_best/sft_qwen_math/merged",
+    "resolved_model_source": "/tmp/case_model_dl_zunb1469",
+    "model_kind": "full_model",
+    "base_model_name": "Qwen/Qwen2.5-0.5B-Instruct"
+  },
+  "prompt": {
+    "style": "rl_math_tutor",
+    "system_prompt": "You are a helpful math tutor. Solve problems step by step, showing your reasoning clearly. Put your final answer in \\boxed{}.",
+    "user_template": "Solve this math problem:\n\n{problem}",
+    "source_files": [
+      "reinforcement_learning/sft_trainer.py",
+      "reinforcement_learning/train_targeted.py"
+    ],
+    "source_note": "SFT training uses the RL math-tutor system prompt plus `Solve this math problem:` as the user turn.",
+    "expected_output_format": "free-form reasoning ending with \\boxed{...}"
+  },
+  "generation": {
+    "max_new_tokens": 8192,
+    "prompt_max_length": 8192,
+    "batch_size": 1,
+    "do_sample": false,
+    "num_beams": 1
+  },
+  "artifacts": {
+    "output_jsonl": "/outputs/case_reasoning_quality_eval/case_full_20260310_175700/sft/sft_case_eval.jsonl",
+    "output_meta_json": "/outputs/case_reasoning_quality_eval/case_full_20260310_175700/sft/sft_run_meta.json"
+  },
+  "service_account_env_present": true
+}

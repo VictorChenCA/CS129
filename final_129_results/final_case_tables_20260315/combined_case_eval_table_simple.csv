@@ -1,0 +1,5 @@
+Split,Model,N (eval/loaded),Step Rel,Step Coh,Ex Rel,Ex Coh
+Algebra,Qwen OOB (Alg),99/105,0.858,0.876,0.822,0.832
+Algebra,Distilled (Alg),101/105,0.698,0.746,0.693,0.731
+Geometry,Qwen OOB (Geom),48/50,0.431,0.555,0.414,0.510
+Geometry,Distilled (Geom),50/50,0.526,0.625,0.543,0.605

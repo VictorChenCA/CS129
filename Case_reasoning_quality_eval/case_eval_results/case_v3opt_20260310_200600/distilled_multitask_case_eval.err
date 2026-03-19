@@ -1,0 +1,8 @@
+C:\Users\maxlr\miniconda3\Lib\site-packages\vertexai\generative_models\_generative_models.py:433: UserWarning: This feature is deprecated as of June 24, 2025 and will be removed on June 24, 2026. For details, see https://cloud.google.com/vertex-ai/generative-ai/docs/deprecations/genai-vertexai-sdk.
+  warning_logs.show_deprecation_warning()
+C:\Users\maxlr\miniconda3\Lib\site-packages\google\auth\_default.py:114: UserWarning: Your application has authenticated using end user credentials from Google Cloud SDK without a quota project. You might receive a "quota exceeded" or "API not enabled" error. See the following page for troubleshooting: https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds. 
+  warnings.warn(_CLOUD_SDK_CREDENTIALS_WARNING)
+<unknown>:5: SyntaxWarning: invalid escape sequence '\s'
+<unknown>:6: SyntaxWarning: invalid escape sequence '\s'
+<unknown>:5: SyntaxWarning: invalid escape sequence '\s'
+<unknown>:3: SyntaxWarning: invalid escape sequence '\s'

@@ -1,0 +1,58 @@
+{
+  "rows": [
+    {
+      "model_name": "base_qwen25_05b_instruct",
+      "eval_subject": "all",
+      "run_name": "qwen25_05b_baseline_eval_all",
+      "easy_accuracy": 0.28,
+      "medium_accuracy": 0.18,
+      "hard_accuracy": 0.06857142857142857,
+      "macro_accuracy": 0.1761904761904762
+    },
+    {
+      "model_name": "base_qwen25_05b_instruct",
+      "eval_subject": "algebra",
+      "run_name": "qwen25_05b_baseline_eval_algebra",
+      "easy_accuracy": 0.54,
+      "medium_accuracy": 0.46,
+      "hard_accuracy": 0.2,
+      "macro_accuracy": 0.39999999999999997
+    },
+    {
+      "model_name": "base_qwen25_05b_instruct",
+      "eval_subject": "geometry",
+      "run_name": "qwen25_05b_baseline_eval_geometry",
+      "easy_accuracy": 0.24,
+      "medium_accuracy": 0.16,
+      "hard_accuracy": 0.0,
+      "macro_accuracy": 0.13333333333333333
+    },
+    {
+      "model_name": "base_qwen25_05b_instruct",
+      "eval_subject": "intermediate_algebra",
+      "run_name": "qwen25_05b_baseline_eval_intermediate_algebra",
+      "easy_accuracy": 0.24,
+      "medium_accuracy": 0.1,
+      "hard_accuracy": 0.02,
+      "macro_accuracy": 0.12
+    },
+    {
+      "model_name": "base_qwen25_05b_instruct",
+      "eval_subject": "number_theory",
+      "run_name": "qwen25_05b_baseline_eval_number_theory",
+      "easy_accuracy": 0.26,
+      "medium_accuracy": 0.18,
+      "hard_accuracy": 0.04,
+      "macro_accuracy": 0.16
+    },
+    {
+      "model_name": "base_qwen25_05b_instruct",
+      "eval_subject": "precalculus",
+      "run_name": "qwen25_05b_baseline_eval_precalculus",
+      "easy_accuracy": 0.2,
+      "medium_accuracy": 0.06,
+      "hard_accuracy": 0.02,
+      "macro_accuracy": 0.09333333333333334
+    }
+  ]
+}

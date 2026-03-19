@@ -1,0 +1,11 @@
+{
+  "out_dir": "C:\\Users\\maxlr\\CS224n\\final_129_results\\final_case_tables_20260315",
+  "files": [
+    "algebra_case_eval_table_pretty.csv",
+    "algebra_case_eval_table_pretty.png",
+    "combined_case_eval_table_pretty.csv",
+    "combined_case_eval_table_pretty.png",
+    "geometry_case_eval_table_pretty.csv",
+    "geometry_case_eval_table_pretty.png"
+  ]
+}

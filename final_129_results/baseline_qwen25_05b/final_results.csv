@@ -1,0 +1,7 @@
+model_name,eval_subject,easy_accuracy,medium_accuracy,hard_accuracy,macro_accuracy,run_name
+base_qwen25_05b_instruct,all,0.28,0.18,0.06857142857142857,0.1761904761904762,qwen25_05b_baseline_eval_all
+base_qwen25_05b_instruct,algebra,0.54,0.46,0.2,0.39999999999999997,qwen25_05b_baseline_eval_algebra
+base_qwen25_05b_instruct,geometry,0.24,0.16,0.0,0.13333333333333333,qwen25_05b_baseline_eval_geometry
+base_qwen25_05b_instruct,intermediate_algebra,0.24,0.1,0.02,0.12,qwen25_05b_baseline_eval_intermediate_algebra
+base_qwen25_05b_instruct,number_theory,0.26,0.18,0.04,0.16,qwen25_05b_baseline_eval_number_theory
+base_qwen25_05b_instruct,precalculus,0.2,0.06,0.02,0.09333333333333334,qwen25_05b_baseline_eval_precalculus

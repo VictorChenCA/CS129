@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "run_name": "case_full_20260310_175700",
+  "dataset": {
+    "hf_dataset": "EleutherAI/hendrycks_math",
+    "subset": "algebra",
+    "split": "test",
+    "num_examples": 100
+  },
+  "model": {
+    "key": "distilled_multitask",
+    "display_name": "Distilled Multitask",
+    "path": "gs://checkpoints-cs224n/final_best/distilled_models/multi_task_algebra_distilled_build_train_set_final_20260309",
+    "resolved_model_source": "/tmp/case_model_dl_gi95l4zd",
+    "model_kind": "lora_adapter_merged_for_inference",
+    "base_model_name": "Qwen/Qwen2.5-0.5B-Instruct"
+  },
+  "prompt": {
+    "style": "distilled_multitask",
+    "system_prompt": null,
+    "user_template": "Solve the following math problem.\n\nProblem:\n{problem}\n",
+    "source_files": [
+      "distilling_step_by_step-gemini/train/train_model_multitask_stratified.py",
+      "distilling_step_by_step-gemini/eval/eval_stratified_heldout_modal.py"
+    ],
+    "source_note": "The multitask distilled model is trained with a user-only prompt and generates `<rationale>...</rationale>` plus `<answer>...</answer>`.",
+    "expected_output_format": "<rationale>...</rationale>\\n<answer>...</answer>"
+  },
+  "generation": {
+    "max_new_tokens": 8192,
+    "prompt_max_length": 8192,
+    "batch_size": 1,
+    "do_sample": false,
+    "num_beams": 1
+  },
+  "artifacts": {
+    "output_jsonl": "/outputs/case_reasoning_quality_eval/case_full_20260310_175700/distilled_multitask/distilled_multitask_case_eval.jsonl",
+    "output_meta_json": "/outputs/case_reasoning_quality_eval/case_full_20260310_175700/distilled_multitask/distilled_multitask_run_meta.json"
+  },
+  "service_account_env_present": true
+}

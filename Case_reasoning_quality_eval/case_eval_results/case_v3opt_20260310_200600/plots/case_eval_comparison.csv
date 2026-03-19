@@ -1,0 +1,5 @@
+Model,Examples,Steps,Step Rel,Step Coh,Ex Rel,Ex Coh,All Rel,All Coh
+SFT,98,285,0.260,0.218,0.292,0.244,14.3%,8.2%
+GRPO,99,339,0.655,0.611,0.623,0.600,36.4%,26.3%
+Targeted DAPO,99,329,0.708,0.638,0.694,0.639,48.5%,34.3%
+Distilled Multitask,100,212,0.726,0.703,0.736,0.702,57.0%,41.0%
