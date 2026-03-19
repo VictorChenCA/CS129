@@ -1,19 +1,22 @@
 # Stratified MATH Dataset Split
 
-A balanced, reproducible re-split of the [Hendrycks MATH](https://github.com/hendrycks/math/) dataset with fixed per-cell quotas across all seven subjects and three difficulty tiers. The original train and test sets are **combined** per subject, then re-split with `random.seed(42)`: the first 200 per _(subject × difficulty)_ cell go to train, the next 50 to test, and the remainder to held-out. Two anomalous `Level ?` entries in Geometry are excluded.
+A balanced, reproducible re-split of the [Hendrycks MATH](https://github.com/hendrycks/math/) dataset with fixed per-cell quotas across all seven subjects and three difficulty tiers. The original train and test sets are **combined** per subject, then re-split with `random.seed(42)`: the first 180 per _(subject × difficulty)_ cell go to train, the next 30 to valid, the next 50 to test, and the remainder to held-out. Two anomalous `Level ?` entries in Geometry are excluded.
 
 ## Files
 
-| File                 | Entries | Description                     |
-| -------------------- | ------- | ------------------------------- |
-| `easy_train.jsonl`   | 1,400   | 200 easy examples per subject   |
-| `easy_test.jsonl`    | 350     | 50 easy examples per subject    |
-| `medium_train.jsonl` | 1,400   | 200 medium examples per subject |
-| `medium_test.jsonl`  | 350     | 50 medium examples per subject  |
-| `hard_train.jsonl`   | 1,400   | 200 hard examples per subject   |
-| `hard_test.jsonl`    | 350     | 50 hard examples per subject    |
+| File                  | Entries | Description                    |
+| --------------------- | ------- | ------------------------------ |
+| `easy_train.jsonl`    | 1,260   | 180 easy examples per subject  |
+| `easy_valid.jsonl`    | 210     | 30 easy examples per subject   |
+| `easy_test.jsonl`     | 350     | 50 easy examples per subject   |
+| `medium_train.jsonl`  | 1,260   | 180 medium examples per subject|
+| `medium_valid.jsonl`  | 210     | 30 medium examples per subject |
+| `medium_test.jsonl`   | 350     | 50 medium examples per subject |
+| `hard_train.jsonl`    | 1,260   | 180 hard examples per subject  |
+| `hard_valid.jsonl`    | 210     | 30 hard examples per subject   |
+| `hard_test.jsonl`     | 350     | 50 hard examples per subject   |
 
-**Total:** 4,200 entries across 6 files. Held-out files are in `../stratified_heldout/`.
+**Total:** 5,460 entries across 9 files. Held-out files are in `../stratified_heldout/`.
 
 ## Difficulty Groups
 

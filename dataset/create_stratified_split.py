@@ -2,7 +2,8 @@
 Create a stratified split of the Hendrycks MATH dataset.
 
 Quotas per (subject × difficulty) cell:
-  - train: 200
+  - train: 180
+  - valid: 30
   - test:  50
   - held-out: remainder
 
@@ -18,7 +19,8 @@ import random
 from collections import defaultdict
 
 SEED = 42
-TRAIN_QUOTA = 200
+TRAIN_QUOTA = 180
+VALID_QUOTA = 30
 TEST_QUOTA = 50
 
 SUBJECTS = [
@@ -61,7 +63,7 @@ def main():
 
     # Accumulators: difficulty -> split -> list of entries
     buckets: dict[str, dict[str, list]] = {
-        diff: {"train": [], "test": [], "heldout": []}
+        diff: {"train": [], "valid": [], "test": [], "heldout": []}
         for diff in DIFFICULTY_MAP
     }
 
@@ -89,20 +91,23 @@ def main():
             random.shuffle(cell)
 
             train = cell[:TRAIN_QUOTA]
-            test = cell[TRAIN_QUOTA: TRAIN_QUOTA + TEST_QUOTA]
-            heldout = cell[TRAIN_QUOTA + TEST_QUOTA:]
+            valid = cell[TRAIN_QUOTA: TRAIN_QUOTA + VALID_QUOTA]
+            test = cell[TRAIN_QUOTA + VALID_QUOTA: TRAIN_QUOTA + VALID_QUOTA + TEST_QUOTA]
+            heldout = cell[TRAIN_QUOTA + VALID_QUOTA + TEST_QUOTA:]
 
             # Tag entries
             for e in cell:
                 e["difficulty_group"] = diff
 
             buckets[diff]["train"].extend(train)
+            buckets[diff]["valid"].extend(valid)
             buckets[diff]["test"].extend(test)
             buckets[diff]["heldout"].extend(heldout)
 
             summary[subject][diff] = {
                 "pool": len(cell),
                 "train": len(train),
+                "valid": len(valid),
                 "test": len(test),
                 "heldout": len(heldout),
             }
@@ -111,7 +116,7 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(HELDOUT_DIR, exist_ok=True)
     for diff in DIFFICULTY_MAP:
-        for split in ("train", "test", "heldout"):
+        for split in ("train", "valid", "test", "heldout"):
             random.shuffle(buckets[diff][split])
             dir_ = HELDOUT_DIR if split == "heldout" else OUTPUT_DIR
             path = os.path.join(dir_, f"{diff}_{split}.jsonl")
@@ -121,7 +126,7 @@ def main():
 
     # Print summary table
     print()
-    header = f"{'Subject':<35} {'Diff':<8} {'Pool':>6} {'Train':>6} {'Test':>6} {'Heldout':>8}"
+    header = f"{'Subject':<35} {'Diff':<8} {'Pool':>6} {'Train':>6} {'Valid':>6} {'Test':>6} {'Heldout':>8}"
     print(header)
     print("-" * len(header))
 
@@ -132,10 +137,11 @@ def main():
             s = summary[subject][diff]
             print(
                 f"{subject:<35} {diff:<8} {s['pool']:>6} {s['train']:>6} "
-                f"{s['test']:>6} {s['heldout']:>8}"
+                f"{s['valid']:>6} {s['test']:>6} {s['heldout']:>8}"
             )
             totals[diff]["pool"] += s["pool"]
             totals[diff]["train"] += s["train"]
+            totals[diff]["valid"] += s["valid"]
             totals[diff]["test"] += s["test"]
             totals[diff]["heldout"] += s["heldout"]
 
@@ -144,13 +150,13 @@ def main():
         t = totals[diff]
         print(
             f"{'TOTAL':<35} {diff:<8} {t['pool']:>6} {t['train']:>6} "
-            f"{t['test']:>6} {t['heldout']:>8}"
+            f"{t['valid']:>6} {t['test']:>6} {t['heldout']:>8}"
         )
 
     print()
     print("Output files:")
     for diff in DIFFICULTY_MAP:
-        for split in ("train", "test", "heldout"):
+        for split in ("train", "valid", "test", "heldout"):
             dir_ = HELDOUT_DIR if split == "heldout" else OUTPUT_DIR
             path = os.path.join(dir_, f"{diff}_{split}.jsonl")
             count = len(buckets[diff][split])
