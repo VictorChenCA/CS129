@@ -1,0 +1,27 @@
+name: cs224n_project
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  # GPU PyTorch (works well on NVIDIA L4)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  # Core project deps (mirrors the high-level packages in environment.yml)
+  - accelerate
+  - datasets
+  - transformers
+  - peft
+  - trl
+  - safetensors
+  - tokenizers
+  - numpy
+  - pandas
+  - pyarrow
+  - pyyaml
+  - regex
+  - tqdm
