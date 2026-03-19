@@ -1,0 +1,33 @@
+{
+  "timestamp": "20260304_235351",
+  "secret": "googlecloud-secret",
+  "dataset_uri": "gs://cs224n-project-data/stratified_math/stratified_heldout/combined_holdout_50_each_20260304_235351.jsonl",
+  "results_gcs_prefix": "gs://checkpoints-cs224n/non-curriculum/evaluation_results_modal_20260304_235351",
+  "logs_root": "c:\\Users\\maxlr\\CS224n\\modal_eval_logs\\20260304_235351",
+  "jobs": [
+    {
+      "name": "grpo_thinkprm",
+      "pid": 31868,
+      "log": "c:\\Users\\maxlr\\CS224n\\modal_eval_logs\\20260304_235351\\thinkprm\\grpo_thinkprm.log",
+      "cmd": "modal run DAPO_ThinkPRM_Eval/Best_of_N_selection_eval.py --args \"--dapo_model_path gs://checkpoints-cs224n/non-curriculum/non_curriculum_phase2_grpo --thinkprm_model_path launch/ThinkPRM-1.5B --output_dir /tmp/grpo_thinkprm_20260304_235351 --results_gcs_prefix gs://checkpoints-cs224n/non-curriculum/evaluation_results_modal_20260304_235351/grpo_thinkprm --dataset_jsonl gs://cs224n-project-data/stratified_math/stratified_heldout/combined_holdout_50_each_20260304_235351.jsonl --limit -1 --num_candidates 8 --gcp_project cs224n-project --dataset_gcp_project cs224n-project-data\""
+    },
+    {
+      "name": "dapo_thinkprm",
+      "pid": 22756,
+      "log": "c:\\Users\\maxlr\\CS224n\\modal_eval_logs\\20260304_235351\\thinkprm\\dapo_thinkprm.log",
+      "cmd": "modal run DAPO_ThinkPRM_Eval/Best_of_N_selection_eval.py --args \"--dapo_model_path gs://checkpoints-cs224n/non-curriculum/non_curriculum_phase3_dapo --thinkprm_model_path launch/ThinkPRM-1.5B --output_dir /tmp/dapo_thinkprm_20260304_235351 --results_gcs_prefix gs://checkpoints-cs224n/non-curriculum/evaluation_results_modal_20260304_235351/dapo_thinkprm --dataset_jsonl gs://cs224n-project-data/stratified_math/stratified_heldout/combined_holdout_50_each_20260304_235351.jsonl --limit -1 --num_candidates 8 --gcp_project cs224n-project --dataset_gcp_project cs224n-project-data\""
+    },
+    {
+      "name": "grpo_rmr1",
+      "pid": 9048,
+      "log": "c:\\Users\\maxlr\\CS224n\\modal_eval_logs\\20260304_235351\\rmr1\\grpo_rmr1.log",
+      "cmd": "modal run DAPO_RMR1_eval/Best_of_N_selection_eval_rm_r1.py --args \"--dapo_model_path gs://checkpoints-cs224n/non-curriculum/non_curriculum_phase2_grpo --rmr1_model_path gaotang/RM-R1-DeepSeek-Distilled-Qwen-7B --output_dir /tmp/grpo_rmr1_20260304_235351 --results_gcs_prefix gs://checkpoints-cs224n/non-curriculum/evaluation_results_modal_20260304_235351/grpo_rmr1 --dataset_jsonl gs://cs224n-project-data/stratified_math/stratified_heldout/combined_holdout_50_each_20260304_235351.jsonl --limit -1 --num_candidates 8 --gcp_project cs224n-project --dataset_gcp_project cs224n-project-data\""
+    },
+    {
+      "name": "dapo_rmr1",
+      "pid": 27200,
+      "log": "c:\\Users\\maxlr\\CS224n\\modal_eval_logs\\20260304_235351\\rmr1\\dapo_rmr1.log",
+      "cmd": "modal run DAPO_RMR1_eval/Best_of_N_selection_eval_rm_r1.py --args \"--dapo_model_path gs://checkpoints-cs224n/non-curriculum/non_curriculum_phase3_dapo --rmr1_model_path gaotang/RM-R1-DeepSeek-Distilled-Qwen-7B --output_dir /tmp/dapo_rmr1_20260304_235351 --results_gcs_prefix gs://checkpoints-cs224n/non-curriculum/evaluation_results_modal_20260304_235351/dapo_rmr1 --dataset_jsonl gs://cs224n-project-data/stratified_math/stratified_heldout/combined_holdout_50_each_20260304_235351.jsonl --limit -1 --num_candidates 8 --gcp_project cs224n-project --dataset_gcp_project cs224n-project-data\""
+    }
+  ]
+}
